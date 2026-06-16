@@ -4,6 +4,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // ロータリーエンコーダでスクロール；スクロール量変更の定義を追記
+
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 &mt {
@@ -56,6 +57,11 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+        };
     };
 
     macros {
@@ -78,11 +84,13 @@
         };
 
         //ロータリーエンコーダでスクロール；スクロール動作の定義；スクロール方向を逆にしたい場合は <&msc SCRL_DOWN> と <&msc SCRL_UP> を入れ替え
+
         encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
     };
@@ -94,14 +102,14 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp TAB                            &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
             //元から定義されていたロータリーエンコーダでPG_UP/DWNをコメントアウト
             //sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
-
             //ロータリーエンコーダでスクロール；レイヤへ配置
+
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
