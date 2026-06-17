@@ -3,8 +3,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// ロータリーエンコーダでスクロール；スクロール量変更の定義を追記
+// JPキーボードの設定で利用するためのキー変換
+#define JP_AT           LEFT_BRACKET      // @
 
+// ロータリーエンコーダでスクロール；スクロール量変更の定義を追記
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 &mt {
