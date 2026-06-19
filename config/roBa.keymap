@@ -61,12 +61,12 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <11 10>;
+            key-positions = <13 12>;
         };
 
         shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 10 11>;
+            bindings = <&kp LA(TAB)>;
+            key-positions = <12 11 13>;
         };
 
         muhennkann {
@@ -86,12 +86,12 @@
 
         f10 {
             bindings = <&kp F10>;
-            key-positions = <8 9>;
+            key-positions = <20 21>;
         };
 
         f9 {
             bindings = <&kp F9>;
-            key-positions = <20 21>;
+            key-positions = <8 9>;
         };
 
         f2 {
@@ -136,10 +136,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I              &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &mt RIGHT_ALT K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &lt 5 TAB                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA            &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                              &kp DEL
+&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I          &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &mt RIGHT_ALT K  &kp L    &kp SQT
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &lt 5 TAB                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA        &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                                   &kp DEL
             >;
 
             //元から定義されていたロータリーエンコーダでPG_UP/DWNをコメントアウト
@@ -151,30 +151,32 @@
 
         FUNCTION {
             bindings = <
-&trans      &trans                  &kp UP_ARROW    &trans                   &trans                           &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&kp HOME    &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END     &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans      &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans      &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans      &trans                  &trans          &trans                   &trans      &trans      &trans   &trans                          &kp F12
+&trans    &trans                  &kp UP_ARROW    &trans                   &trans                        &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&kp HOME  &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&trans    &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
+&trans    &trans                  &trans          &trans                   &trans   &trans      &trans   &trans                          &kp F12
             >;
         };
 
         NUM {
-//一部を無理やりJP配列コードに置き換え
+            //一部を無理やりJP配列コードに置き換え
+
             bindings = <
-&kp MINUS          &kp N7        &kp N8        &kp N9        &kp COLON                                                       &kp RIGHT_BRACKET  &kp BACKSLASH         &kp PLUS         &kp DOLLAR      &kp PERCENT
-&kp SLASH          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DOUBLE_QUOTES  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp EXCLAMATION  &kp HASH        &kp LEFT_BRACKET
-&mt LEFT_SHIFT N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD         &kp UNDER                    &trans          &kp RIGHT_BRACE    &kp PIPE              &kp EQUAL        &kp CARET       &kp JP_YEN
-&trans             &trans        &trans        &trans        &trans             &trans                       &trans          &trans                                                                    &kp LS(0x89)
+&kp MINUS          &kp N7        &kp N8        &kp N9        &kp COLON                                                       &kp RIGHT_BRACKET  &kp BACKSLASH         &kp PLUS         &kp DOLLAR  &kp PERCENT
+&kp SLASH          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DOUBLE_QUOTES  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp EXCLAMATION  &kp HASH    &kp LEFT_BRACKET
+&mt LEFT_SHIFT N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD         &kp UNDER                    &trans          &kp RIGHT_BRACE    &kp PIPE              &kp EQUAL        &kp CARET   &kp JP_YEN
+&trans             &trans        &trans        &trans        &trans             &trans                       &trans          &trans                                                                &kp LS(0x89)
             >;
         };
 
         ARROW {
-//一部を無理やりJP配列コードに置き換え
+            //一部を無理やりJP配列コードに置き換え
+
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans           &trans          &trans              &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &kp JP_DQUOTE    &kp JP_QUOTE    &kp JP_BACKQUOTE    &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans           &trans          &trans              &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                                       &trans
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans         &trans        &trans            &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &kp JP_DQUOTE  &kp JP_QUOTE  &kp JP_BACKQUOTE  &trans
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans         &trans        &trans            &trans
+&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
