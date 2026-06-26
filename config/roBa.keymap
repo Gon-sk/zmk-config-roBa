@@ -98,6 +98,21 @@
             bindings = <&kp F2>;
             key-positions = <32 33>;
         };
+
+        MB1_LeftClick {
+            bindings = <&mkp MB1>;
+            key-positions = <19 20>;
+        };
+
+        MB2_RightClick {
+            bindings = <&mkp MB2>;
+            key-positions = <30 31>;
+        };
+
+        MB3_MiddleClick {
+            bindings = <&mkp MB3>;
+            key-positions = <6 7>;
+        };
     };
 
     macros {
@@ -184,10 +199,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB1  &mkp MB2  &mkp MB2
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB3  &mkp MB3  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
