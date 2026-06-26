@@ -101,17 +101,17 @@
 
         MB1_LeftClick {
             bindings = <&mkp MB1>;
-            key-positions = <19 20>;
+            key-positions = <19 18>;
         };
 
         MB2_RightClick {
             bindings = <&mkp MB2>;
-            key-positions = <30 31>;
+            key-positions = <19 20>;
         };
 
         MB3_MiddleClick {
             bindings = <&mkp MB3>;
-            key-positions = <6 7>;
+            key-positions = <18 20>;
         };
     };
 
